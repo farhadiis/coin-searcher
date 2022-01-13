@@ -1,1 +1,1 @@
-##Coin Searcher
+Coin Searcher
