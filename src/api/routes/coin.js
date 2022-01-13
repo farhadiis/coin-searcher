@@ -49,7 +49,7 @@ module.exports = (app) => {
           message: 'Coin update successful.',
           data: null
         }).end();
-        logger.log('verbose', 'Coin update successful.');
+        logger.log('verbose', 'Coin update api done.');
       } catch (err) {
         logger.log('error', 'Coin update failed in put endpoint.', {
           err
@@ -81,7 +81,7 @@ module.exports = (app) => {
             data: []
           }).end();
         }
-        logger.log('verbose', 'Coins find successful.');
+        logger.log('verbose', 'Coin find api done.');
       } catch (err) {
         logger.log('error', 'Coins find failed in get endpoint.', {
           err
