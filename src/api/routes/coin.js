@@ -14,6 +14,11 @@ const validator = require('../validator');
 module.exports = (app) => {
   app.use('/coin', route);
 
+  /**
+   * Update coin
+   * PUT: /api/coin
+   * BODY: {symbol, markPrice}
+   */
   route.put('/',
     body('symbol')
       .exists({
@@ -54,6 +59,10 @@ module.exports = (app) => {
       }
     });
 
+  /**
+   * Find coins
+   * GET: /api/coin?symbol={SYMBOL}&pageNumber={PAGE_NUMBER}&pageSize={PAGE_SIZE}
+   */
   route.get('/',
     async (req, res, next) => {
       try {
