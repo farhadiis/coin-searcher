@@ -7,7 +7,7 @@ const _ = require('lodash');
 
 class CoinService {
   constructor(container) {
-    this.providerFactory = container.get(ProviderFactory);
+    this.providerFactory = container ? container.get(ProviderFactory) : null;
   }
   /**
    * Update all coins or insert new coins.
