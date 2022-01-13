@@ -25,7 +25,7 @@ describe('Coin Test', () => {
     await request(app).get('/status').type('json').send().expect(200);
   });
 
-  it('should return 400 for send empty post', async () => {
+  it('should return 404 for send empty post', async () => {
     await request(app).post('/api/coin').type('json').send().expect(404);
   });
 
