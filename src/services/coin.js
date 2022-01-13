@@ -31,6 +31,9 @@ class CoinService {
         upsert: true
       }
     }));
+    if (_.isEmpty(updates)) {
+      return;
+    }
     try {
       const result = await Coin.bulkWrite(updates, {
         ordered: false // continue on upsert error

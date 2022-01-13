@@ -21,7 +21,7 @@ class BinanceProvider extends Provider {
     if (_.get(result, 'code', 0) === -1121) {
       throw new Error(_.get(result, 'msg', 'unknown'));
     }
-    if (_.isObject(result)) {
+    if (!_.isArray(result)) {
       return [result];
     }
     return result;
